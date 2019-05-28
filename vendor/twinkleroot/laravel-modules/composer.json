@@ -1,0 +1,62 @@
+{
+  "name": "twinkleroot/laravel-modules",
+  "description": "add Laravel Module management(nwidart/laravel-modules vendor)",
+  "keywords": [
+    "modules",
+    "laravel",
+    "nwidart",
+    "module",
+    "rad",
+    "laonboard",
+    "twinkleroot"
+  ],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Twinkle Ahn",
+      "email": "lalala13@sir.kr",
+      "homepage": "http://laonboard.com",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "php": ">=7.0"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "~6.0",
+    "mockery/mockery": "~0.9",
+    "orchestra/testbench": "^3.5",
+    "friendsofphp/php-cs-fixer": "^2.7",
+    "laravel/framework": "5.5.*",
+    "spatie/phpunit-snapshot-assertions": "^1.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Nwidart\\Modules\\": "src"
+    },
+    "files": [
+      "src/helpers.php"
+    ]
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Nwidart\\Modules\\Tests\\": "tests",
+      "Modules\\Recipe\\": "tests/stubs/Recipe"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Nwidart\\Modules\\LaravelModulesServiceProvider"
+      ],
+      "aliases": {
+        "Module": "Nwidart\\Modules\\Facades\\Module"
+      }
+    },
+    "branch-alias": {
+      "dev-master": "2.0-dev"
+    }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}
